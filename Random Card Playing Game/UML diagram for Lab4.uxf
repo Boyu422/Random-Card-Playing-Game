@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>10</y>
+      <w>290</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Lab4
+
+--
+- option : String
+- cardDeck : ArrayList&lt;cardTemplate&gt;
+- players : ArrayList&lt;Player&gt;
+- playCard : ArrayList&lt;CardTemplate&gt;
+--
+_+main(args:String[]):void_
++Lab4()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>10</y>
+      <w>210</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt; 
+CardTemplate
+
+--
+_+MAX_CARDS : int_
+_+MAX_SUITS : int_
+_+MAX_FACES : int_
+_+suitShort : char[4]_
+_+rankShort : String[13]_
+_+suitLong : String[4]_
+_rankLong : String[13]_
+--
++getShortName() : String
++getLondName() : String
++getCardValue() : int
++getSuitType() : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>270</y>
+      <w>400</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Player
+
+--
+- playerHand : ArrayList&lt;CardTemplate&gt;
+- name : String
+- score : int
+- myRandom : Random
+--
+~ Player(paraName : String)
++ addCard(myCard : CardTemplate) : void
++ getHand() : String
++ handWon() : void
++ getScore() : int
++ getName() : Stirng
++ reset() : void
++ playCard() : CardTemplate
++ playCardBonus (firstCard : CardTemplate) : CardTemplate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>340</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Card
+
+--
+- random1 : Random
+- random2 : Random
+- randomFace : int
+- randomSuit : int
+--
++getShortName() : String
++getLondName() : String
++getCardValue() : int
++getSuitType() : int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>260</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>570</x>
+      <y>190</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>UML by Boyu Li</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
